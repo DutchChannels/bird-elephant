@@ -242,7 +242,7 @@ class Request
                     break;
                 }
 
-                sleep($status->check_after_secs);
+                sleep($status?->processing_info?->check_after_secs ?? 3);
 
             }
 
